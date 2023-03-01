@@ -3,12 +3,15 @@
 import AppFooter from './components/AppFooter.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import AppSidebar from './components/AppSidebar.vue'
+
 
 export default {
   components: {
     AppFooter,
     AppHeader,
     AppMain,
+    AppSidebar,
   }
 }
 </script>
@@ -16,6 +19,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
+  <AppSidebar />
   <AppFooter />
 </template>
 
