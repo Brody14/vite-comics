@@ -1,7 +1,43 @@
 <script >
 
+import AppFooter from './components/AppFooter.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
+
+export default {
+  components: {
+    AppFooter,
+    AppHeader,
+    AppMain,
+  }
+}
 </script>
 
-<template></template>
+<template>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
+</template>
 
-<style></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+</style>
