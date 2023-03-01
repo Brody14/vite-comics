@@ -33,6 +33,7 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 ul,

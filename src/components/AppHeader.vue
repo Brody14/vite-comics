@@ -7,16 +7,8 @@
 
             <nav class="main-nav">
                 <ul class="nav">
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item active">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item ">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item">LINK</li>
-                    <li class="nav__item">LINK</li>
+                    <li class="nav__item" v-for="item in navbarItems"> {{ item }}</li>
+
                 </ul>
             </nav>
 
@@ -26,6 +18,15 @@
 </template>
   
 <script>
+export default {
+    data() {
+        return {
+            navbarItems: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop']
+        }
+    }
+
+}
+
 
 </script>
   
@@ -37,7 +38,6 @@
 
 .main-header {
     padding: 25px;
-    position: relative;
 }
 
 .header-logo {
@@ -52,22 +52,25 @@
 .nav__item {
     cursor: pointer;
     padding: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
 }
 
 .nav__item:active,
-.nav__item.active,
 .nav__item:hover {
     color: #0282f9;
 }
 
-.nav__item:active::after,
-.nav__item.active::after {
+.nav__item:active::after {
     content: '';
     display: block;
-    height: 5px;
-    width: 40px;
+    height: 4px;
+    width: 100%;
     background-color: #0282f9;
     position: absolute;
-    bottom: 0;
+    bottom: -37px;
+    left: 0;
+    right: 0;
 }
 </style>

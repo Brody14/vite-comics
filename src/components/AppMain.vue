@@ -1,7 +1,5 @@
 <template>
     <main class="main-content">
-
-        MAIN
     </main>
 </template>
   
@@ -12,7 +10,7 @@
 <style scoped>
 .main-content {
     background-color: black;
-    padding: 50px;
+    padding: 49px;
     color: white;
 }
 </style>
