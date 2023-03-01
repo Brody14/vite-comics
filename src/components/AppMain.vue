@@ -7,9 +7,11 @@
 
 </script>
   
-<style scoped>
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .main-content {
-    background-color: black;
+    background-color: $main-bg;
     padding: 49px;
     color: white;
 }

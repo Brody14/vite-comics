@@ -30,23 +30,25 @@ export default {
 
 </script>
   
-<style scoped>
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .container {
     align-items: center;
     justify-content: space-between;
 }
 
 .main-header {
-    padding: 25px;
-}
+    padding: 20px;
 
-.header-logo {
-    height: 50px;
-}
+    .header-logo {
+        height: 50px;
+    }
 
-.nav {
-    display: flex;
-    gap: 10px;
+    .nav {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 .nav__item {
@@ -54,23 +56,24 @@ export default {
     padding: 5px;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: 700;
     position: relative;
-}
 
-.nav__item:active,
-.nav__item:hover {
-    color: #0282f9;
-}
+    &:active,
+    &:hover {
+        color: $sidebar-bg;
+    }
 
-.nav__item:active::after {
-    content: '';
-    display: block;
-    height: 4px;
-    width: 100%;
-    background-color: #0282f9;
-    position: absolute;
-    bottom: -37px;
-    left: 0;
-    right: 0;
+    &:active::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $sidebar-bg;
+        position: absolute;
+        bottom: -37px;
+        left: 0;
+        right: 0;
+    }
 }
 </style>

@@ -150,7 +150,9 @@ export default {
 }
 </script>
   
-<style scoped>
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .main-footer {
     color: white;
 }
@@ -162,7 +164,7 @@ export default {
 }
 
 .footer-sidebar {
-    background-color: #0282f9;
+    background-color: $sidebar-bg;
     padding: 20px;
 }
 
@@ -171,54 +173,52 @@ export default {
     display: flex;
     align-items: center;
     gap: 10px;
-}
 
-.card-img img {
-    height: 40px;
-}
+    .card-img img {
+        height: 40px;
+    }
 
-.card-img:last-child img {
-    width: 40px;
-}
+    &:last-child img {
+        width: 40px;
+    }
 
-.card:last-child .card-img img {
-    width: 40px;
-}
+    .card-body {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
 
-.card-body {
-    font-size: 10px;
-    text-transform: uppercase;
 }
 
 .footer-links {
     background-image: url('/img/footer-bg.jpg');
     background-size: cover;
-    padding: 20px;
+    padding: 24px;
     color: white;
-    height: 260px;
     overflow: hidden;
+
+    .row {
+        display: flex;
+        gap: 15px;
+
+        .menu {
+            margin-bottom: 10px;
+        }
+
+        .menu-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 700;
+            color: $link-color;
+        }
+    }
 }
 
-.row {
-    display: flex;
-    gap: 15px;
-}
-
-.menu {
-    margin-bottom: 10px;
-}
-
-.menu-title {
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.menu-item {
-    font-size: 12px;
-    font-weight: 700;
-    color: #837f77;
-}
 
 .col img {
     height: 400px;
@@ -229,36 +229,40 @@ export default {
 }
 
 .footer-social {
-    background-color: #303030;
+    background-color: $footer-bg;
     padding: 20px;
-}
 
-.btn {
-    text-transform: uppercase;
-    padding: 10px;
-    font-weight: 700;
-}
+    .btn {
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 700;
+    }
 
-.btn-sign {
-    background-color: unset;
-    border: 2px solid #0282f9;
-    color: white;
-    font-size: 12px;
-}
+    .btn-sign {
+        background-color: unset;
+        border: 2px solid $sidebar-bg;
+        color: white;
+        font-size: 12px;
+    }
 
-.social-wrap {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+    .social-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-.btn-follow {
-    background-color: unset;
-    color: #0282f9;
-    border: none;
-}
+    .btn-follow {
+        background-color: unset;
+        color: $sidebar-bg;
+        border: none;
+    }
 
-.social-icons {
-    display: contents;
+    .social-icons {
+        display: contents;
+
+        li img {
+            height: 30px;
+        }
+    }
 }
 </style>

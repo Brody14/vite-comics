@@ -19,33 +19,8 @@ export default {
   <AppFooter />
 </template>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul,
-ol,
-menu {
-  list-style: none;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  /* border: 2px solid black; */
-}
+<style lang="scss">
+@use './style/general.scss';
 </style>
+
