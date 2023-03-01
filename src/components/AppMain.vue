@@ -12,7 +12,7 @@
 <style scoped>
 .main-content {
     background-color: black;
-    height: 30px;
+    padding: 40px;
     color: white;
 }
 </style>

@@ -67,6 +67,6 @@
     width: 100%;
     background-color: #0282f9;
     position: absolute;
-    bottom: -39px;
+    bottom: -38px;
 }
 </style>
