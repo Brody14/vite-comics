@@ -40,4 +40,11 @@ ol,
 menu {
   list-style: none;
 }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  /* border: 2px solid black; */
+}
 </style>
