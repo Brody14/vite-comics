@@ -36,7 +36,8 @@
 }
 
 .main-header {
-    padding: 20px;
+    padding: 25px;
+    position: relative;
 }
 
 .header-logo {
@@ -45,12 +46,12 @@
 
 .nav {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .nav__item {
-    position: relative;
     cursor: pointer;
+    padding: 5px;
 }
 
 .nav__item:active,
@@ -64,9 +65,9 @@
     content: '';
     display: block;
     height: 5px;
-    width: 100%;
+    width: 40px;
     background-color: #0282f9;
     position: absolute;
-    bottom: -38px;
+    bottom: 0;
 }
 </style>
