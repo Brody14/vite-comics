@@ -3,7 +3,6 @@
 import AppFooter from './components/AppFooter.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-import AppSidebar from './components/AppSidebar.vue'
 import Hero from './components/Hero.vue'
 
 
@@ -13,7 +12,6 @@ export default {
     AppFooter,
     AppHeader,
     AppMain,
-    AppSidebar,
     Hero,
   }
 }
@@ -23,7 +21,6 @@ export default {
   <AppHeader />
   <Hero />
   <AppMain />
-  <AppSidebar />
   <AppFooter />
 </template>
 

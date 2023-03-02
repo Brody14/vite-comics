@@ -134,11 +134,7 @@ export default {
     background-color: $sidebar-bg;
     border: none;
     width: 17%;
-
-
 }
-
-.btn-blue.large {}
 
 .btn-blue.badge {
     font-size: 20px;

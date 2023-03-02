@@ -1,47 +1,24 @@
 <template>
-    <div class="sidebar">
-        <div class="container">
-            <div class="card" v-for="item in sidebarItems">
-                <div class="card-img">
-                    <img :src="item.img" alt="">
-                </div>
-                <div class="card-body">
-                    <p>{{ item.text }}</p>
-                </div>
-            </div>
-
-
+    <div class="card">
+        <div class="card-img">
+            <img :src="img" alt="">
         </div>
-
+        <div class="card-body">
+            <p>{{ text }}</p>
+        </div>
     </div>
 </template>
   
 <script>
 export default {
-    data() {
-        return {
-            sidebarItems: [
-                {
-                    img: '/img/buy-comics-digital-comics.png',
-                    text: 'digital comics',
-                },
-                {
-                    img: '/img/buy-comics-merchandise.png',
-                    text: 'dc merchandise',
-                },
-                {
-                    img: '/img/buy-comics-subscriptions.png',
-                    text: 'subscription',
-                },
-                {
-                    img: '/img/buy-comics-shop-locator.png',
-                    text: 'comic shop locator',
-                },
-                {
-                    img: '/img/buy-dc-power-visa.svg',
-                    text: 'dc power visa',
-                },
-            ]
+    props: {
+        img: {
+            type: String,
+            required: true
+        },
+        text: {
+            type: String,
+            required: true
         }
     }
 }
@@ -50,17 +27,6 @@ export default {
   
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
-
-
-.container {
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.sidebar {
-    background-color: $sidebar-bg;
-    padding: 20px;
-}
 
 .card {
     padding: 20px;

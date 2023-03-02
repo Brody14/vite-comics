@@ -1,5 +1,10 @@
 <template>
     <footer class="main-footer">
+        <div class="sidebar">
+            <div class="container">
+                <AppSidebar v-for="item in sidebarItems" :key="item.text" :text="item.text" :img="item.img" />
+            </div>
+        </div>
         <div class="footer-links">
             <div class="container">
                 <div class="row">
@@ -56,9 +61,35 @@
 </template>
   
 <script>
+import AppSidebar from './AppSidebar.vue';
 export default {
+    components: {
+        AppSidebar,
+    },
     data() {
         return {
+            sidebarItems: [
+                {
+                    img: '/img/buy-comics-digital-comics.png',
+                    text: 'digital comics',
+                },
+                {
+                    img: '/img/buy-comics-merchandise.png',
+                    text: 'dc merchandise',
+                },
+                {
+                    img: '/img/buy-comics-subscriptions.png',
+                    text: 'subscription',
+                },
+                {
+                    img: '/img/buy-comics-shop-locator.png',
+                    text: 'comic shop locator',
+                },
+                {
+                    img: '/img/buy-dc-power-visa.svg',
+                    text: 'dc power visa',
+                },
+            ],
             socialIcons: [
                 "/img/footer-facebook.png",
                 "/img/footer-twitter.png",
@@ -117,6 +148,11 @@ export default {
 
 .main-footer {
     color: white;
+}
+
+.sidebar {
+    background-color: $sidebar-bg;
+    padding: 20px;
 }
 
 .container {
