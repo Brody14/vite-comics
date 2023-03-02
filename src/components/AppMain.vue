@@ -1,5 +1,6 @@
 <template>
     <main class="main-content">
+
         <div class="container">
             <span class="btn btn-blue badge">current series</span>
             <div class="grid">
@@ -9,13 +10,14 @@
 
         </div>
         <div class="container">
-            <button class="btn btn-blue large">load more</button>
+            <button class="btn btn-blue">load more</button>
         </div>
     </main>
 </template>
   
 <script>
 import Card from './Card.vue'
+
 export default {
     components: {
         Card,
@@ -109,11 +111,13 @@ export default {
     background-color: $main-bg;
     padding: 20px;
     color: white;
+}
+
+.container {
     position: relative;
 }
 
 .container+.container {
-
     justify-content: center;
 }
 
@@ -121,7 +125,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
-    padding: 20px;
+    padding: 20px 10px;
     margin-bottom: 30px;
 }
 
@@ -129,15 +133,16 @@ export default {
     text-align: center;
     background-color: $sidebar-bg;
     border: none;
+    width: 17%;
+
 
 }
 
-.btn-blue.large {
-    width: 20%;
-}
+.btn-blue.large {}
 
 .btn-blue.badge {
+    font-size: 20px;
     position: absolute;
-    top: -15px;
+    top: -40px;
 }
 </style>

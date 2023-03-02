@@ -5,7 +5,7 @@
                 <img class="header-logo" src="/img/dc-logo.png" alt="DC logo">
             </figure>
 
-            <nav class="main-nav">
+            <nav class="header-nav">
                 <ul class="nav">
                     <li class="nav__item" v-for="item in navbarItems"> {{ item }}</li>
 
@@ -45,6 +45,10 @@ export default {
         height: 50px;
     }
 
+    .header-nav {
+        padding: 0 10px;
+    }
+
     .nav {
         display: flex;
         gap: 10px;
@@ -71,7 +75,7 @@ export default {
         width: 100%;
         background-color: $sidebar-bg;
         position: absolute;
-        bottom: -37px;
+        bottom: -32px;
         left: 0;
         right: 0;
     }
