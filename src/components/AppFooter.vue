@@ -41,10 +41,10 @@
         <div class="footer-social">
 
             <div class="container">
-                <button class="btn btn-sign">sign-up now!</button>
+                <button class="btn-sign">sign-up now!</button>
                 <div class="social-wrap">
-                    <button class="btn btn-follow">follow us</button>
                     <ul class="social-icons">
+                        <li class="follow">follow us</li>
                         <li v-for="icon in socialIcons"><img :src="icon" alt=""></li>
                     </ul>
 
@@ -71,7 +71,7 @@ export default {
                 'Characters',
                 'Comics',
                 'Movies',
-                'Tv',
+                'TV',
                 'Games',
                 'Collectibles',
                 'Videos',
@@ -147,34 +147,34 @@ export default {
         }
 
         .menu-item {
-            font-size: 12px;
-            line-height: 14px;
+            font-size: 10px;
+            line-height: 15px;
             font-weight: 700;
             color: $link-color;
         }
     }
 }
 
+.col {
+    margin-bottom: 10px;
+}
 
 .col img {
-    height: 400px;
+    height: 475px;
     position: absolute;
-    top: -75px;
+    top: -112px;
     right: 0;
 
 }
 
 .footer-social {
     background-color: $footer-bg;
-    padding: 20px;
+    padding: 10px;
 
-    .btn {
+    .btn-sign {
         text-transform: uppercase;
         padding: 10px;
         font-weight: 700;
-    }
-
-    .btn-sign {
         background-color: unset;
         border: 2px solid $sidebar-bg;
         color: white;
@@ -187,10 +187,11 @@ export default {
         gap: 20px;
     }
 
-    .btn-follow {
-        background-color: unset;
+    .follow {
         color: $sidebar-bg;
-        border: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
     }
 
     .social-icons {
