@@ -8,34 +8,8 @@
         <div class="footer-links">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-
-                        <h2 class="menu-title ">dc comics</h2>
-                        <ul class="menu">
-                            <li class="menu-item" v-for="element in dcComics">{{ element }}</li>
-                        </ul>
-
-
-                        <h2 class="menu-title">shop</h2>
-                        <ul>
-                            <li class="menu-item" v-for="element in shop">{{ element }}</li>
-                        </ul>
-
-                    </div>
-                    <div class="col">
-                        <h2 class="menu-title">dc</h2>
-                        <ul>
-                            <li class="menu-item" v-for="element in dc">{{ element }}</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h2 class="menu-title">sites</h2>
-                        <ul>
-                            <li class="menu-item" v-for="element in sites">{{ element }}</li>
-                        </ul>
-                    </div>
-
-
+                    <Menu v-for="item in menuLinks" :key="item.title" :links="item.links" :title="item.title">
+                    </Menu>
                 </div>
                 <div class="col">
                     <img src="/img/dc-logo-bg.png" alt="Dc Logo">
@@ -62,9 +36,11 @@
   
 <script>
 import AppSidebar from './AppSidebar.vue';
+import Menu from './Menu.vue'
 export default {
     components: {
         AppSidebar,
+        Menu,
     },
     data() {
         return {
@@ -97,46 +73,57 @@ export default {
                 "/img/footer-pinterest.png",
                 "/img/footer-periscope.png"
             ],
+            menuLinks: [
+                {
+                    title: 'dc comics',
+                    links: [
+                        'Characters',
+                        'Comics',
+                        'Movies',
+                        'TV',
+                        'Games',
+                        'Collectibles',
+                        'Videos',
+                        'Fans',
+                        'News']
 
-            dcComics: [
-                'Characters',
-                'Comics',
-                'Movies',
-                'TV',
-                'Games',
-                'Collectibles',
-                'Videos',
-                'Fans',
-                'News'
-            ],
+                },
+                {
+                    title: 'dc',
+                    links: [
+                        'Terms Of Use',
+                        'Privacy policy (New)',
+                        'Ad Choices',
+                        'Advertising',
+                        'Privacy ',
+                        'Jobs',
+                        'Subscriptions',
+                        'Talent Workshops',
+                        'Subscriptions',
+                        'CPSC Certificates',
+                        'Ratings',
+                        'Shop Help',
+                        'Contact Us',]
 
-            shop: [
-                'Shop DC',
-                'Shop DC Collectibles',
-            ],
-            dc: [
-                'Terms Of Use',
-                'Privacy policy (New)',
-                'Ad Choices',
-                'Advertising',
-                'Privacy ',
-                'Jobs',
-                'Subscriptions',
-                'Talent Workshops',
-                'Subscriptions',
-                'CPSC Certificates',
-                'Ratings',
-                'Shop Help',
-                'Contact Us',
-            ],
-            sites: [
-                'DC',
-                'MAD Magazine',
-                'DC Kids',
-                'DC Universe',
-                'DC Power Visa ',
+                },
+                {
+                    title: 'sites',
+                    links: [
+                        'DC',
+                        'MAD Magazine',
+                        'DC Kids',
+                        'DC Universe',
+                        'DC Power Visa ',]
+
+                },
+                {
+                    title: 'shop',
+                    links: [
+                        'Shop DC',
+                        'Shop DC Collectibles',]
+
+                },
             ]
-
         }
     }
 
@@ -171,28 +158,16 @@ export default {
     .row {
         display: flex;
         gap: 15px;
+        position: relative;
 
-        .menu {
-            margin-bottom: 10px;
-        }
 
-        .menu-title {
-            text-transform: uppercase;
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
-
-        .menu-item {
-            font-size: 10px;
-            line-height: 15px;
-            font-weight: 700;
-            color: $link-color;
-        }
     }
 }
 
 .col {
     margin-bottom: 10px;
+
+
 }
 
 .col img {
