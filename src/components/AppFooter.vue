@@ -41,7 +41,7 @@
         <div class="footer-social">
 
             <div class="container">
-                <button class="btn-sign">sign-up now!</button>
+                <button class="btn btn-outline">sign-up now!</button>
                 <div class="social-wrap">
                     <ul class="social-icons">
                         <li class="follow">follow us</li>
@@ -171,13 +171,10 @@ export default {
     background-color: $footer-bg;
     padding: 10px;
 
-    .btn-sign {
-        text-transform: uppercase;
-        padding: 10px;
-        font-weight: 700;
+    .btn-outline {
+
         background-color: unset;
         border: 2px solid $sidebar-bg;
-        color: white;
         font-size: 12px;
     }
 
