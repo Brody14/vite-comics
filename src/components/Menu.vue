@@ -25,9 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../style/partials/variables' as *;
-
-.col:nth-child(4n) {
+.col:nth-child(4) {
     position: absolute;
     bottom: -16px;
 }
@@ -45,8 +43,7 @@ export default {
 .menu-item {
     font-size: 10px;
     line-height: 15px;
-    font-weight: 700;
-    color: $link-color;
+    color: rgba(255, 255, 255, 0.4);
 }
 </style>
 

@@ -8,8 +8,8 @@
         <div class="footer-links">
             <div class="container">
                 <div class="row">
-                    <Menu v-for="item in menuLinks" :key="item.title" :links="item.links" :title="item.title">
-                    </Menu>
+                    <Menu v-for="item in menuLinks" :key="item.title" :links="item.links" :title="item.title" />
+
                 </div>
                 <div class="col">
                     <img src="/img/dc-logo-bg.png" alt="Dc Logo">
@@ -157,17 +157,13 @@ export default {
 
     .row {
         display: flex;
-        gap: 15px;
+        gap: 40px;
         position: relative;
-
-
     }
 }
 
 .col {
     margin-bottom: 10px;
-
-
 }
 
 .col img {
